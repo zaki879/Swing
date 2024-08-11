@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-startbar="light" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swing - Admin</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      content="Premium Multipurpose Admin & Dashboard Template"
+      name="description"
+    />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="fullscreen.js"></script>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- App css -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <!-- Top Bar Start -->
+  <body>
+    <!-- Top Bar Start -->
+    <div class="topbar d-print-none">
+      <div class="container-xxl">
+        <nav
+          class="topbar-custom d-flex justify-content-between"
+          id="topbar-custom"
+        >
+          <ul
+            class="topbar-item list-unstyled d-inline-flex align-items-center mb-0"
+          >
+            <li>
+              <button class="nav-link mobile-menu-btn nav-icon" id="togglemenu">
+                <i class="iconoir-menu-scale"></i>
+              </button>
+            </li>
+            <li class="mx-3 welcome-text">
+              <h3 class="user-nam mb-0 fw-bold text-truncate" ></h3>
+              <!-- <h6 class="mb-0 fw-normal text-muted text-truncate fs-14">Here's your overview this week.</h6> -->
+            </li>
+          </ul>
+          <ul
+            class="topbar-item list-unstyled d-inline-flex align-items-center mb-0"
+          >
+           
+          <li class="dropdown">
+            <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="index.html#" role="button"
+            aria-haspopup="false" aria-expanded="false">
+            <div id="fullscreen-icon" title="Toggle Fullscreen">⛶</div>
+
+            </a>
+            
+        </li><!--end topbar-language-->
+            <!--end topbar-language-->
+
+            <li class="topbar-item">
+              <a
+                class="nav-link nav-icon"
+                href="javascript:void(0);"
+                id="light-dark-mode"
+              >
+                <i class="icofont-moon dark-mode"></i>
+                <i class="icofont-sun light-mode"></i>
+              </a>
+            </li>
+
+          
+
+            <li class="dropdown topbar-item">
+                <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="ecommerce-index#" role="button"
+                aria-haspopup="false" aria-expanded="false">
+                <img src="assets/images/users/OIP.jpeg" alt="" class="thumb-lg rounded-circle">
+            </a>
+              <div class="dropdown-menu dropdown-menu-end py-0">
+                <div class="d-flex align-items-center dropdown-item py-2 bg-secondary-subtle">
+                  <div class="flex-shrink-0">
+                      <img src="assets/images/users/OIP.jpeg" alt="" class="thumb-md rounded-circle">
+                  </div>
+                  <div class="flex-grow-1 ms-2 text-truncate align-self-center">
+                      <h6  class="user-name my-0 fw-medium text-dark fs-13"></h6>
+                      <small class="text-muted mb-0">Administrator</small>
+                  </div><!--end media-body-->
+              </div>
+              
+              <a id="logout-link" class='dropdown-item text-danger' ><i class="las la-power-off fs-18 me-1 align-text-bottom"></i> Logout</a>
+
+              </div>
+            </li>
+          </ul>
+          <!--end topbar-nav-->
+        </nav>
+        <!-- end navbar-->
+      </div>
+    </div>
+    <!-- Top Bar End -->
+    <!-- leftbar-tab-menu -->
+    <div class="startbar d-print-none">
+      <!--start brand-->
+      <div class="brand">
+        <a
+          class="logo"
+          href="Dashboard.html"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            flex-direction: column;
+          "
+        >
+          <span>
+            <img src="assets/images/log.svg" alt="logo-small" class="logo-sm" />
+          </span>
+          <span class="">
+            <img
+              src="assets/images/logtextl.svg"
+              alt="logo-large"
+              class="logo-lg logo-light"
+            />
+            <img
+              src="assets/images/logtext.svg"
+              alt="logo-large"
+              class="logo-lg logo-dark"
+            />
+          </span>
+        </a>
+      </div>
+      <!--end brand-->
+      <!--start startbar-menu-->
+      <div class="startbar-menu">
+        <div class="startbar-collapse" id="startbarCollapse" data-simplebar>
+          <div class="d-flex align-items-center flex-column w-100">
+            <!-- Navigation -->
+            <ul class="navbar-nav mb-auto w-100">
+              <li class="menu-label pt-0 mt-0">
+                <span>Main Menu</span>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="ecommerce-index#sidebarDashboards"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarDashboards"
+                >
+                  <i class="iconoir-home-simple menu-icon"></i>
+                  <span style="margin-bottom: 2px">Dashboard</span>
+                </a>
+                <div class="collapse" id="sidebarDashboards">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="Dashboard">Statistics</a>
+                    </li>
+                    <!--end nav-item-->
+                  </ul>
+                  <!--end nav-->
+                </div>
+                <!--end startbarDashboards-->
+              </li>
+              <!--end nav-item-->
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="ecommerce-index#sidebarApplications"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarApplications"
+                >
+                  <i class="iconoir-view-grid menu-icon"></i>
+                  <span style="margin-right: 10px; margin-bottom: 2px"
+                    >Clinic control</span
+                  >
+                </a>
+                <div class="collapse" id="sidebarApplications">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="Users">Users</a>
+                    </li>
+                    <!--end nav-item-->
+                    <li class="nav-item">
+                      <a class="nav-link" href="Rooms">Rooms</a>
+                    </li>
+                    <!--end nav-item-->
+                    <li class="nav-item">
+                      <a class="nav-link" href="specialities">Specialities</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Orders">Orders</a>
+                    </li>
+                    <!--end nav-item-->
+                  </ul>
+                  <!--end nav-->
+                </div>
+                <!--end startbarApplications-->
+              </li>
+              <!--end nav-item-->
+              <li class="menu-label mt-2">
+                <small class="label-border">
+                  <div class="border_left hidden-xs"></div>
+                  <div class="border_right"></div>
+                </small>
+                <span>Schedule</span>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="ecommerce-index#sidebarEmailTemplates"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarEmailTemplates"
+                >
+                  <i class="iconoir-calendar menu-icon"></i>
+                  <span style="margin-bottom: 2px">Control it</span>
+                </a>
+                <div class="collapse" id="sidebarEmailTemplates">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="analytics-customers"
+                        >Add new schedule</a
+                      >
+                    </li>
+                    <!--end nav-item-->
+                    <li class="nav-item">
+                      <a class="nav-link" href="Edit-schedule"
+                        >Edit schedule</a
+                      >
+                    </li>
+                    <!--end nav-item-->
+                  </ul>
+                  <!--end nav-->
+                </div>
+                <!--end startbarEmailTemplates-->
+              </li>
+              <!--end nav-item-->
+            </ul>
+            <!--end navbar-nav--->
+          </div>
+        </div>
+        <!--end startbar-collapse-->
+      </div>
+      <!--end startbar-menu-->
+    </div>
+    <!--end startbar-->
+    <div class="startbar-overlay d-print-none"></div>
+    <!-- end leftbar-tab-menu-->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col-12">
+              <div class="chat-box-left">
+                <ul
+                  class="nav nav-tabs nav-justified"
+                  id="myTab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link py-2 active"
+                      id="messages_chat_tab"
+                      data-bs-toggle="tab"
+                      role="tab"
+                      >Select Users</a
+                    >
+                  </li>
+                  <div class="user-controls">
+                    <button
+                      id="select-all"
+                      style="margin: 10px;padding-left:10px;padding-right:10px;padding-top:0px;padding-bottom:0px;border: 0px; border-radius: 50%;background-color: transparent;"
+                    >
+                    <svg class="colorchangesvg" width="25" height="25" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M693.539 207.889C722.736 218.149 743.667 245.964 743.667 278.667V612C743.667 690.24 680.24 753.667 602 753.667H268.667C235.964 753.667 208.149 732.736 197.889 703.539L267.799 703.652L602 703.667C652.626 703.667 693.667 662.626 693.667 612V278.667L693.534 276.967L693.539 207.889ZM585.227 87C626.648 87 660.227 120.579 660.227 162V595.227C660.227 636.648 626.648 670.227 585.227 670.227H152C110.579 670.227 77 636.648 77 595.227V162C77 120.579 110.579 87 152 87H585.227ZM459.322 269.322L329.705 398.94L297 355.333C288.716 344.288 273.046 342.049 262 350.333C250.954 358.618 248.716 374.288 257 385.333L307 452C316.128 464.171 333.92 465.435 344.678 454.678L494.678 304.678C504.441 294.915 504.441 279.085 494.678 269.322C484.915 259.559 469.085 259.559 459.322 269.322Z" fill="#22c55e"/>
+                      </svg>
+                      
+                    </button>
+                    <button
+                      id="remove-all"
+                      style="margin: 10px;padding:10px;border: 0px; border-radius: 50%;background-color: transparent;"
+                    >
+                    <svg class="colorchangesvg" width="25" height="25" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M683.206 187.556C712.403 197.816 733.334 225.631 733.334 258.334V591.667C733.334 669.907 669.907 733.334 591.667 733.334H258.334C225.631 733.334 197.816 712.403 187.556 683.206L257.466 683.319L591.667 683.334C642.293 683.334 683.334 642.293 683.334 591.667V258.334L683.201 256.634L683.206 187.556ZM574.894 66.667C616.315 66.667 649.894 100.246 649.894 141.667V574.894C649.894 616.315 616.315 649.894 574.894 649.894H141.667C100.246 649.894 66.667 616.315 66.667 574.894V141.667C66.667 100.246 100.246 66.667 141.667 66.667H574.894Z" fill="#22c55e"/>
+                      </svg>
+                      
+                    </button>
+                    <button
+                      id="select-specialty"
+                      class="btn btn-secondary colortheme"
+                      style="margin: 15px;border-radius: 20px;"
+                      
+                    >
+                      Select by Specialty
+                    </button>
+                    
+                    <select
+                      id="specialty-dropdown"
+                      class="form-select"
+                      style="margin-top: 10px;margin-left: 10px"
+                    >
+                      <option value="">Select Specialty</option>
+                    </select>
+                  </div>
+                </ul>
+                <div
+                class="modal fade"
+                id="customAlert"
+                tabindex="-1"
+                aria-labelledby="customAlertLabel"
+                aria-hidden="true"
+                style="z-index: 99999999999"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="customAlertLabel">Alert</h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body" style="color: black">
+                      Please select a specialty.
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                      >
+                        OK
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="chat-body-left px-3" style="height: 550px; overflow-y: auto;" > <!-- Adjust height as needed -->
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="messages_chat">
+                        <div class="row">
+                          <div class="col">
+                            <div id="user-list">
+                              <div class="user-scroll" ></div>
+                            </div>
+                          </div>
+                          <!--end col-->
+                        </div>
+                        <!--end row-->
+                      </div>
+                      <!--end general chat-->
+                    </div>
+                    <!--end tab-content-->
+                  </div>
+                  
+              </div>
+              <!--end chat-box-left -->
+
+              <div class="chat-box-right">
+                <div class="p-3 d-flex justify-content-between card-bg rounded">
+                  <a href="Schedule" class="d-flex align-self-center">
+                    <div class="flex-shrink-0">
+                      <!-- <img
+                        src="assets/images/users/avatar-1.jpg"
+                        alt="user"
+                        class="rounded-circle thumb-lg"
+                      /> -->
+                    </div>
+                    <!-- media-left -->
+                    <div class="flex-grow-1 ms-2 align-self-center">
+                      <div>
+                        <h6 class="my-0 fw-medium text-dark fs-14">
+                          Select Time of works
+                        </h6>
+                        <p class="text-muted mb-0" style="font-weight: 500;">Hr managment</p>
+                      </div>
+                    </div>
+                    <!-- end media-body --> </a
+                  ><!--end media-->
+               
+                </div>
+                <!-- end chat-header -->
+            <div style="height: 20px;"> </div>
+                <div id="calendar">
+                    <div id="calendar-header">
+                      <!-- HTML -->
+                      <button id="prev-month" class="nav-button">
+                        <span class="button-icon">&lt;</span>
+                      </button>
+        
+                      <h2 id="month-year"></h2>
+                      <button id="next-month" class="nav-button">
+                        <span class="button-icon">&gt; </span>
+                      </button>
+                    </div>
+                    <div id="calendar-days">
+                      <div class="day">Sun</div>
+                      <div class="day">Mon</div>
+                      <div class="day">Tue</div>
+                      <div class="day">Wed</div>
+                      <div class="day">Thu</div>
+                      <div class="day">Fri</div>
+                      <div class="day">Sat</div>
+                    </div>
+                    <div id="calendar-dates" style="font-weight: 400;">
+                      <!-- Dates will be generated by JavaScript -->
+                    </div>
+                  </div>
+                  <div style="height: 30px"></div>
+                  <div style="display: flex;justify-content: space-between;flex-direction: row;align-items: center;align-self: center;">   <button id="post-schedules" class="btn btn-primary" style="margin: 10px;height: fit-content;">
+                    Publish
+                  </button>
+                  <div id="MyClockDisplay" class="clock" onload="showTime()" style="z-index: 9999999999999999;"></div></div>
+               
+
+                  <div id="alerts-container" style="position: fixed; top: 100px; right: 20px; z-index: 1050;"></div>
+        
+                  <div id="event-modal" class="modal">
+                    <div class="modal-content">
+                      <span class="close-button">&times;</span>
+                      <h3>Select Time</h3>
+                      <div class="input-group">
+                        <label for="event-start-time">Start Time</label>
+                        <input type="time" id="event-start-time" />
+                      </div>
+                      <div class="input-group">
+                        <label for="event-end-time">End Time</label>
+                        <input type="time" id="event-end-time" />
+                      </div>
+                      <button id="save-event">Save Event</button>
+                    </div>
+                  </div>
+           
+              <!--end chat-box-right -->
+            </div>
+
+            <!-- end col -->
+          </div>
+          
+          <!-- end row -->
+        </div>
+
+        <!-- container -->
+        <!--Start Rightbar-->
+        <!--Start Rightbar/offcanvas-->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="Appearance"
+          aria-labelledby="AppearanceLabel"
+        >
+          <div class="offcanvas-header border-bottom justify-content-between">
+            <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+            <button
+              type="button"
+              class="btn-close text-reset p-0 m-0 align-self-center"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <h6>Account Settings</h6>
+            <div class="p-2 text-start mt-3">
+              <div class="form-check form-switch mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch1"
+                />
+                <label class="form-check-label" for="settings-switch1"
+                  >Auto updates</label
+                >
+              </div>
+              <!--end form-switch-->
+              <div class="form-check form-switch mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch2"
+                  checked
+                />
+                <label class="form-check-label" for="settings-switch2"
+                  >Location Permission</label
+                >
+              </div>
+              <!--end form-switch-->
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch3"
+                />
+                <label class="form-check-label" for="settings-switch3"
+                  >Show offline Contacts</label
+                >
+              </div>
+              <!--end form-switch-->
+            </div>
+            <!--end /div-->
+            <h6>General Settings</h6>
+            <div class="p-2 text-start mt-3">
+              <div class="form-check form-switch mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch4"
+                />
+                <label class="form-check-label" for="settings-switch4"
+                  >Show me Online</label
+                >
+              </div>
+              <!--end form-switch-->
+              <div class="form-check form-switch mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch5"
+                  checked
+                />
+                <label class="form-check-label" for="settings-switch5"
+                  >Status visible to all</label
+                >
+              </div>
+              <!--end form-switch-->
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch6"
+                />
+                <label class="form-check-label" for="settings-switch6"
+                  >Notifications Popup</label
+                >
+              </div>
+              <!--end form-switch-->
+            </div>
+            <!--end /div-->
+          </div>
+          <!--end offcanvas-body-->
+        </div>
+        <!--end Rightbar/offcanvas-->
+        <!--end Rightbar-->
+        <!--Start Footer-->
+
+
+        <!--end footer-->
+      </div>
+      
+      <!-- end page content -->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- Javascript  -->
+    <!-- vendor js -->
+<script src="fullscreen.js"></script>
+
+    <script src="assets/libs/script.js"></script>
+    <script src="assets/libs/fetch.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+  <!--end body-->
+</html>

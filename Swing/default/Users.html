@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-startbar="light" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swing - Admin</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      content="Premium Multipurpose Admin & Dashboard Template"
+      name="description"
+    />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- App css -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- SweetAlert2 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
+<!-- jQuery (necessary for Select2) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Select2 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+  </head>
+
+  <!-- Top Bar Start -->
+  <body>
+    <!-- Top Bar Start -->
+    <div class="topbar d-print-none">
+      <div class="container-xxl">
+        <nav
+          class="topbar-custom d-flex justify-content-between"
+          id="topbar-custom"
+        >
+          <ul
+            class="topbar-item list-unstyled d-inline-flex align-items-center mb-0"
+          >
+            <li>
+              <button class="nav-link mobile-menu-btn nav-icon" id="togglemenu">
+                <i class="iconoir-menu-scale"></i>
+              </button>
+            </li>
+            <li class="mx-3 welcome-text">
+              <h3 class="user-nam mb-0 fw-bold text-truncate" ></h3>
+              <!-- <h6 class="mb-0 fw-normal text-muted text-truncate fs-14">Here's your overview this week.</h6> -->
+            </li>
+          </ul>
+          <ul
+            class="topbar-item list-unstyled d-inline-flex align-items-center mb-0"
+          >
+          <li class="dropdown">
+            <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="index.html#" role="button"
+            aria-haspopup="false" aria-expanded="false">
+            <div id="fullscreen-icon" title="Toggle Fullscreen">⛶</div>
+
+            </a>
+            
+        </li><!--end topbar-language-->
+            <!--end topbar-language-->
+
+            <li class="topbar-item">
+              <a
+                class="nav-link nav-icon"
+                href="javascript:void(0);"
+                id="light-dark-mode"
+              >
+                <i class="icofont-moon dark-mode"></i>
+                <i class="icofont-sun light-mode"></i>
+              </a>
+            </li>
+
+            <li class="dropdown topbar-item">
+              <a
+                class="nav-link dropdown-toggle arrow-none nav-icon"
+                data-bs-toggle="dropdown"
+                href="Users#"
+                role="button"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <img
+                  src="assets/images/users/OIP.jpeg"
+                  alt=""
+                  class="thumb-lg rounded-circle"
+                />
+              </a>
+              <div class="dropdown-menu dropdown-menu-end py-0">
+                <div class="d-flex align-items-center dropdown-item py-2 bg-secondary-subtle">
+                  <div class="flex-shrink-0">
+                      <img src="assets/images/users/OIP.jpeg" alt="" class="thumb-md rounded-circle">
+                  </div>
+                  <div class="flex-grow-1 ms-2 text-truncate align-self-center">
+                      <h6  class="user-name my-0 fw-medium text-dark fs-13"></h6>
+                      <small class="text-muted mb-0">Administrator</small>
+                  </div><!--end media-body-->
+              </div>
+
+              <a id="logout-link" class='dropdown-item text-danger' ><i class="las la-power-off fs-18 me-1 align-text-bottom"></i> Logout</a>
+
+              </div>
+            </li>
+          </ul>
+          <!--end topbar-nav-->
+        </nav>
+        <!-- end navbar-->
+      </div>
+    </div>
+    <!-- Top Bar End -->
+    <!-- leftbar-tab-menu -->
+    <div class="startbar d-print-none">
+      <!--start brand-->
+      <div class="brand">
+        <a
+          class="logo"
+          href="Dashboard.html"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            flex-direction: column;
+          "
+        >
+          <span>
+            <img src="assets/images/log.svg" alt="logo-small" class="logo-sm" />
+          </span>
+          <span class="">
+            <img
+              src="assets/images/logtextl.svg"
+              alt="logo-large"
+              class="logo-lg logo-light"
+            />
+            <img
+              src="assets/images/logtext.svg"
+              alt="logo-large"
+              class="logo-lg logo-dark"
+            />
+          </span>
+        </a>
+      </div>
+      <div class="startbar-menu">
+        <div class="startbar-collapse" id="startbarCollapse" data-simplebar>
+          <div class="d-flex align-items-center flex-column w-100">
+            <!-- Navigation -->
+            <ul class="navbar-nav mb-auto w-100">
+              <li class="menu-label pt-0 mt-0">
+                <span>Main Menu</span>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="ecommerce-index#sidebarDashboards"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarDashboards"
+                >
+                  <i class="iconoir-home-simple menu-icon"></i>
+                  <span style="margin-bottom: 2px">Dashboard</span>
+                </a>
+                <div class="collapse" id="sidebarDashboards">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="Dashboard">Statistics</a>
+                    </li>
+                    <!--end nav-item-->
+                  </ul>
+                  <!--end nav-->
+                </div>
+                <!--end startbarDashboards-->
+              </li>
+              <!--end nav-item-->
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="ecommerce-index#sidebarApplications"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidebarApplications"
+                >
+                  <i class="iconoir-view-grid menu-icon"></i>
+                  <span style="margin-right: 10px; margin-bottom: 2px"
+                    >Clinic control</span
+                  >
+                </a>
+                <div class="collapse" id="sidebarApplications">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="Users">Users</a>
+                    </li>
+                    <!--end nav-item-->
+                    <li class="nav-item">
+                      <a class="nav-link" href="Rooms">Rooms</a>
+                    </li>
+                    <!--end nav-item-->
+                    <li class="nav-item">
+                      <a class="nav-link" href="specialities">Specialities</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Orders">Orders</a>
+                    </li>
+                    <!--end nav-item-->
+                  </ul>
+                  <!--end nav-->
+                </div>
+                <!--end startbarApplications-->
+              </li>
+              <!--end nav-item-->
+              <li class="menu-label mt-2">
+                <small class="label-border">
+                  <div class="border_left hidden-xs"></div>
+                  <div class="border_right"></div>
+                </small>
+                <span>Schedule</span>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="ecommerce-index#sidebarEmailTemplates" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="sidebarEmailTemplates">
+                    <i class="iconoir-calendar menu-icon"></i>
+                    <span style="margin-bottom: 2px;">Control it</span>
+                </a>
+                <div class="collapse " id="sidebarEmailTemplates">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class='nav-link' href='Schedule.html'>Add new schedule</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class='nav-link' href='Edit-schedule'>Edit schedule</a>
+                        </li><!--end nav-item-->
+                    
+                    </ul><!--end nav-->
+                </div><!--end startbarEmailTemplates-->
+            </li><!--end nav-item-->
+         
+              <!--end nav-item-->
+            </ul>
+            <!--end navbar-nav--->
+          </div>
+        </div>
+        <!--end startbar-collapse-->
+      </div>
+    </div>
+    <!--end startbar-->
+    <div class="startbar-overlay d-print-none"></div>
+    <!-- end leftbar-tab-menu-->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content" id="users">
+        <div class="container-xxl">
+          <div style="height: 10px"></div>
+          <button
+            id="add-user-button"
+            class="btn bg-primary-subtle text-primary"
+            style="margin-bottom: 10px"
+          >
+            <i class="fas fa-plus me-1"></i> Add User
+          </button>
+          <div class="row" id="users-container"></div>
+          <!--end row-->
+        </div>
+        <!-- container -->
+
+        <!--Start Rightbar-->
+        <!--Start Rightbar/offcanvas-->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="Appearance"
+          aria-labelledby="AppearanceLabel"
+        >
+          <div class="offcanvas-header border-bottom justify-content-between">
+            <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+            <button
+              type="button"
+              class="btn-close text-reset p-0 m-0 align-self-center"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <h6>Account Settings</h6>
+            <div class="p-2 text-start mt-3">
+              <div class="form-check form-switch mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch1"
+                />
+                <label class="form-check-label" for="settings-switch1"
+                  >Auto updates</label
+                >
+              </div>
+              <!--end form-switch-->
+              <div class="form-check form-switch mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch2"
+                  checked
+                />
+                <label class="form-check-label" for="settings-switch2"
+                  >Location Permission</label
+                >
+              </div>
+              <!--end form-switch-->
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch3"
+                />
+                <label class="form-check-label" for="settings-switch3"
+                  >Show offline Contacts</label
+                >
+              </div>
+              <!--end form-switch-->
+            </div>
+            <!--end /div-->
+            <h6>General Settings</h6>
+            <div class="p-2 text-start mt-3">
+              <div class="form-check form-switch mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch4"
+                />
+                <label class="form-check-label" for="settings-switch4"
+                  >Show me Online</label
+                >
+              </div>
+              <!--end form-switch-->
+              <div class="form-check form-switch mb-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch5"
+                  checked
+                />
+                <label class="form-check-label" for="settings-switch5"
+                  >Status visible to all</label
+                >
+              </div>
+              <!--end form-switch-->
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="settings-switch6"
+                />
+                <label class="form-check-label" for="settings-switch6"
+                  >Notifications Popup</label
+                >
+              </div>
+              <!--end form-switch-->
+            </div>
+            <!--end /div-->
+          </div>
+          <!--end offcanvas-body-->
+        </div>
+        <!--end Rightbar/offcanvas-->
+        <!--end Rightbar-->
+        <!--Start Footer-->
+        <div id="edit-profile-popup-new" class="popup-modal-new hidden">
+          <div class="popup-content-new">
+            <div
+              class="card"
+              style="background-color: rgba(0, 0, 0, 0); color: black"
+            >
+              <div class="card-body pt-0">
+                <!-- Close Button -->
+                <button
+                  id="close-popup-new"
+                  class=""
+                  aria-label="Close"
+                  style="color: gray; font-size: 30px"
+                ></button>
+        
+                <form action="" method="post" id="edit-profile-form-new">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div
+                      class="tab-pane active show"
+                      id="step1-new"
+                      role="tabpanel"
+                      aria-labelledby="step1-tab"
+                    >
+                      <h4 class="card-title my-4 fs-15">Add new user</h4>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row mb-2">
+                            <label
+                              for="firstname-new"
+                              class="col-lg-3 col-form-label text-end black"
+                              >Firstname</label
+                            >
+                            <div class="col-lg-9">
+                              <input
+                                id="firstname-new"
+                                name="firstname-new"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row mb-2">
+                            <label
+                              for="phone-new"
+                              class="col-lg-3 col-form-label text-end"
+                              >Phone</label
+                            >
+                            <div class="col-lg-9">
+                              <input
+                                id="phone-new"
+                                name="phone-new"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row mb-2">
+                            <label
+                              for="lastname-new"
+                              class="col-lg-3 col-form-label text-end"
+                              >Lastname</label
+                            >
+                            <div class="col-lg-9">
+                              <input
+                                id="lastname-new"
+                                name="lastname-new"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row mb-2">
+                            <label
+                              for="email-new"
+                              class="col-lg-3 col-form-label text-end"
+                              >Email</label
+                            >
+                            <div class="col-lg-9">
+                              <input
+                                id="email-new"
+                                name="email-new"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row mb-2">
+                              <label
+                                  for="floors-select"
+                                  class="col-lg-3 col-form-label text-end"
+                              >Floors</label>
+                              <div class="col-lg-9">
+                                  <select
+                                      id="floors-select"
+                                      name="floors"
+                                      class="form-control"
+                                      multiple="multiple"
+                                  >
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row mb-2">
+                          <label for="positionname-new" class="col-lg-3 col-form-label text-end">Position Name</label>
+                          <div class="col-lg-9">
+                            <select id="positionname-new" name="positionname-new" class="form-control">
+                              <!-- Options will be dynamically populated -->
+                            </select>
+                            <input type="hidden" id="position-id-new" name="position-id-new">
+                          </div>
+                        </div>
+                      </div>
+                     
+                      </div>
+                      <div class="mt-2">
+                        <button
+                          type="submit"
+                          id="step1Next-new"
+                          class="btn btn-primary float-end"
+                        >
+                          Add new User
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Add other steps similarly -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Popup HTML structure -->
+        <div id="edit-profile-popup" class="popup-modal hidden">
+          <div class="popup-content">
+            <div
+              class="card"
+              style="background-color: rgba(0, 0, 0, 0); color: black"
+            >
+              <div class="card-body pt-0">
+                <!-- Close Button -->
+                <button
+                  id="close-popup"
+                  class=""
+                  aria-label="Close"
+                  style="color: gray; font-size: 30px"
+                ></button>
+
+                <form action="" method="post" id="edit-profile-form">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div
+                      class="tab-pane active show"
+                      id="step1"
+                      role="tabpanel"
+                      aria-labelledby="step1-tab"
+                    >
+                      <h4 class="card-title my-4 fs-15">User Details</h4>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row mb-2">
+                            <label
+                              for="firstname"
+                              class="col-lg-3 col-form-label text-end black"
+                              >Firstname</label
+                            >
+                            <div class="col-lg-9">
+                              <input
+                                id="firstname"
+                                name="firstname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row mb-2">
+                            <label
+                              for="phone"
+                              class="col-lg-3 col-form-label text-end"
+                              >Phone</label
+                            >
+                            <div class="col-lg-9">
+                              <input
+                                id="phone"
+                                name="phone"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row mb-2">
+                            <label
+                              for="lastname"
+                              class="col-lg-3 col-form-label text-end"
+                              >Lastname</label
+                            >
+                            <div class="col-lg-9">
+                              <input
+                                id="lastname"
+                                name="lastname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row mb-2">
+                            <label for="positionname" class="col-lg-3 col-form-label text-end">Position Name</label>
+                            <div class="col-lg-9">
+                              <select id="positionname" name="positionname" class="form-control">
+                                <!-- Options will be dynamically populated -->
+                              </select>
+                              <input type="hidden" id="position-id" name="position-id">
+                            </div>
+                          </div>
+                        </div>
+                       
+                      </div>
+                      <div class="mt-2">
+                        <button
+                          type="submit"
+                          id="step1Next"
+                          class="btn btn-primary float-end"
+                        >
+                          Save Changes
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Add other steps similarly -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="alerts-container"
+          style="position: fixed; top: 100px; right: 20px; z-index: 1050"
+        ></div>
+
+        <!--end footer-->
+      </div>
+      <!-- end page content -->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- Javascript  -->
+    <!-- vendor js -->
+    <!-- SweetAlert2 CSS -->
+    <script src="fullscreen.js"></script>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+<!-- Select2 CSS -->
+
+<!-- jQuery (necessary for Select2) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Select2 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <script src="assets/libs/script2.js"></script>
+    <script src="assets/libs/script.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+  <!--end body-->
+</html>

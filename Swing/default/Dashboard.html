@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-startbar="light" data-bs-theme="light">
+
+<head>
+    
+
+    <meta charset="utf-8" />
+            <title>Swing - Admin</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+            <meta content="" name="author" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+            <!-- App favicon -->
+            <link rel="shortcut icon" href="assets/images/favicon.ico">
+           
+       
+
+    <link rel="stylesheet" href="assets/libs/jsvectormap/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="assets/css/stylechart.css">
+    <script > document.addEventListener('DOMContentLoaded', function() {
+        // Check if access token is available in localStorage
+        const accessToken = localStorage.getItem('accessToken');
+    
+        if (!accessToken) {
+          // No access token found, redirect to login page
+          window.location.href = 'sign-in.html'; // Adjust the login URL as needed
+        } else {
+          // Access token found, proceed with loading the page
+          console.log('Access token found. Proceeding to load the page.');
+        }
+      });</script>
+      <script src="fullscreen.js"></script>
+     <!-- App css -->
+     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- Top Bar Start -->
+    <div class="topbar d-print-none">
+        <div class="container-xxl">
+            <nav class="topbar-custom d-flex justify-content-between" id="topbar-custom">    
+        
+
+                <ul class="topbar-item list-unstyled d-inline-flex align-items-center mb-0">                        
+                    <li>
+                        <button class="nav-link mobile-menu-btn nav-icon" id="togglemenu">
+                            <i class="iconoir-menu-scale"></i>
+                        </button>
+                    </li> 
+                    <li class="mx-3 welcome-text">
+                        <h3 class="user-nam mb-0 fw-bold text-truncate" ></h3>
+                        <!-- <h6 class="mb-0 fw-normal text-muted text-truncate fs-14">Here's your overview this week.</h6> -->
+                    </li>                   
+                </ul>
+                <ul class="topbar-item list-unstyled d-inline-flex align-items-center mb-0">
+                   
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="index.html#" role="button"
+                        aria-haspopup="false" aria-expanded="false">
+                        <div id="fullscreen-icon" title="Toggle Fullscreen">⛶</div>
+
+                        </a>
+                        
+                    </li><!--end topbar-language-->
+        
+                    <li class="topbar-item">
+                        <a class="nav-link nav-icon" href="javascript:void(0);" id="light-dark-mode">
+                            <i class="icofont-moon dark-mode"></i>
+                            <i class="icofont-sun light-mode"></i>
+                        </a>                    
+                    </li>
+    
+                
+                    <li class="dropdown topbar-item">
+                        <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="index.html#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/users/OIP.jpeg" alt="" class="thumb-lg rounded-circle">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end py-0">
+                            <div class="d-flex align-items-center dropdown-item py-2 bg-secondary-subtle">
+                                <div class="flex-shrink-0">
+                                    <img src="assets/images/users/OIP.jpeg" alt="" class="thumb-md rounded-circle">
+                                </div>
+                                <div class="flex-grow-1 ms-2 text-truncate align-self-center">
+                                    <h6  class="user-name my-0 fw-medium text-dark fs-13"></h6>
+                                    <small class="text-muted mb-0">Administrator</small>
+                                </div><!--end media-body-->
+                            </div>
+                     
+                            <a id="logout-link" class='dropdown-item text-danger' ><i class="las la-power-off fs-18 me-1 align-text-bottom"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul><!--end topbar-nav-->
+            </nav>
+            <!-- end navbar-->
+        </div>
+    </div>
+    <!-- Top Bar End -->
+    <!-- leftbar-tab-menu -->
+    <div class="startbar d-print-none">
+        <!--start brand-->
+        <div class="brand">
+            <a class='logo' href='Dashboard.html' style="display: flex;justify-content: center; align-items: center; align-self: center; flex-direction: column;">
+                <span>
+                    <img src="assets/images/log.svg" alt="logo-small" class="logo-sm">
+                </span>
+                <span class="">
+                    <img src="assets/images/logtextl.svg" alt="logo-large" class="logo-lg logo-light" >
+                    <img src="assets/images/logtext.svg" alt="logo-large" class="logo-lg logo-dark" >
+                </span>
+            </a>
+        </div>
+        <!--end brand-->
+        <!--start startbar-menu-->
+        <div class="startbar-menu" >
+            <div class="startbar-collapse" id="startbarCollapse" data-simplebar>
+                <div class="d-flex align-items-center flex-column w-100">
+                    <!-- Navigation -->
+                    <ul class="navbar-nav mb-auto w-100">
+                        <li class="menu-label pt-0 mt-0">
+                       
+                            <span>Main Menu</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ecommerce-index#sidebarDashboards" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="sidebarDashboards">
+                                <i class="iconoir-home-simple menu-icon"></i>
+                                <span style="margin-bottom: 2px;margin-right: 2px;">Dashboards</span>
+                            </a>
+                            <div class="collapse " id="sidebarDashboards">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class='nav-link' href='Dashboard'>Statistics</a>
+                                    </li><!--end nav-item-->
+                                </ul><!--end nav-->
+                            </div><!--end startbarDashboards-->
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="ecommerce-index#sidebarApplications" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="sidebarApplications">
+                                <i class="iconoir-view-grid menu-icon"></i>
+                                <span style="margin-right: 10px;margin-bottom: 2px;">Clinic control</span>
+                            </a>
+                            <div class="collapse " id="sidebarApplications">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class='nav-link ' href='Users'>Users</a>
+                                    </li><!--end nav-item-->                            
+                                    <li class="nav-item">
+                                        <a class='nav-link ' href='Rooms'>Rooms</a>
+                                    </li><!--end nav-item--> 
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="specialities">Specialities</a>
+                                      </li>
+                                    <li class="nav-item">
+                                        <a class='nav-link' href='ecommerce-orders'>Orders</a>
+                                    </li><!--end nav-item--> 
+                                                              
+                                </ul><!--end nav-->
+                            </div><!--end startbarApplications-->
+                        </li><!--end nav-item-->
+                        <li class="menu-label mt-2">
+                            <small class="label-border">
+                                <div class="border_left hidden-xs"></div>
+                                <div class="border_right"></div>
+                            </small>
+                            <span>Schedule</span>
+                        </li>
+                  
+                   
+                        <li class="nav-item">
+                            <a class="nav-link" href="ecommerce-index#sidebarEmailTemplates" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="sidebarEmailTemplates">
+                                <i class="iconoir-calendar menu-icon"></i>
+                                <span style="margin-bottom: 2px;">Control it</span>
+                            </a>
+                            <div class="collapse " id="sidebarEmailTemplates">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class='nav-link' href='Schedule.html'>Add new schedule</a>
+                                    </li><!--end nav-item-->
+                                    <li class="nav-item">
+                                        <a class='nav-link' href='Edit-schedule'>Edit schedule</a>
+                                    </li><!--end nav-item-->
+                                
+                                </ul><!--end nav-->
+                            </div><!--end startbarEmailTemplates-->
+                        </li><!--end nav-item-->
+                     
+                    </ul><!--end navbar-nav--->
+             
+                </div>
+            </div><!--end startbar-collapse-->
+        </div><!--end startbar-menu-->   
+    </div><!--end startbar-->
+    <div class="startbar-overlay d-print-none"></div>
+    <!-- end leftbar-tab-menu-->
+
+    <div class="page-wrapper">
+
+        <!-- Page Content-->
+        <div class="page-content">
+            <div class="container-xxl">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row d-flex justify-content-center border-dashed-bottom pb-3">
+                                    <div class="col-9">
+                                        <p class="text-dark mb-0 fw-semibold fs-14">Staff</p>
+                                        <h3 class="mt-2 mb-0 fw-bold" id="staff"></h3>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-3 align-self-center">
+                                        <div class="d-flex justify-content-center align-items-center thumb-xl bgicons rounded-circle mx-auto">
+                                            <i class="iconoir-hexagon-dice h1 align-self-center mb-0 text-secondary"></i>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                </div>
+                               
+                            </div>
+                            <!--end card-body-->
+                        </div>
+                        <!--end card-->
+                    </div>
+                    <!--end col-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row d-flex justify-content-center border-dashed-bottom pb-3">
+                                    <div class="col-9">
+                                        <p class="text-dark mb-0 fw-semibold fs-14">Rooms</p>
+                                        <h3 class="mt-2 mb-0 fw-bold" id="rooms"></h3>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-3 align-self-center" style="display: block; ">
+                                        <div class="d-flex justify-content-center align-items-center thumb-xl bgicons rounded-circle mx-auto" >
+                                            <i class="iconoir-share-android h1 align-self-center mb-0 text-secondary" ></i>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                </div>
+                                <!--end row-->
+                               
+                            </div>
+                            <!--end card-body-->
+                        </div>
+                        <!--end card-->
+                    </div>
+                    <!--end col-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row d-flex justify-content-center border-dashed-bottom pb-3">
+                                    <div class="col-9">
+                                        <p class="text-dark mb-0 fw-semibold fs-14">Operations</p>
+                                        <h3 class="mt-2 mb-0 fw-bold" id="orderscount"></h3>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-3 align-self-center">
+                                        <div class="d-flex justify-content-center align-items-center thumb-xl bgicons rounded-circle mx-auto">
+                                            <i class="iconoir-percentage-circle h1 align-self-center mb-0 text-secondary"></i>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                </div>
+                            
+                            </div>
+                            <!--end card-body-->
+                        </div>
+                        <!--end card-->
+                    </div>
+                    <!--end col-->
+                </div>
+                <!--end row-->
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-8 d-flex justify-content-center align-items-center">
+                        <div class="card" style="height: 60vh;">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Operations Overview</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div  style="display: flex; flex-direction: column;width: 100%;">
+                                    <div id="chart-area" >
+                                  
+                                    </div>
+                                    <div id="chart-bar">
+                                  
+                                    </div>
+                                </div>   
+                                                               
+                           
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--end col-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card" style="height: 60vh;">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Users</h4>
+                                    </div><!--end col-->
+                                    <div class="col text-end">
+                                        <select id="userFilter" class="form-select">
+                                            <option value="all">All Users</option>
+                                            <option value="active">Active Users</option>
+                                        </select>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body pt-0" style="height: 400px; overflow: hidden;">
+                                <div class="table-wrapper" style="display: flex; flex-direction: column; height: 100%;">
+                                    <div class="table-header" style=" z-index: 1;">
+                                        <table class="table mb-0 table-centered" style="margin-bottom: 0;">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>Username</th>
+                                                    <th>Speciality</th>
+                                                    <th class="text-end">Action</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="table-responsive" style="flex: 1; overflow-y: auto;">
+                                        <table class="table mb-0 table-centered">
+                                            <tbody id="onlineUsersTable">
+                                                <!-- Online users will be dynamically added here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div><!--end card-body-->
+                        </div>
+                        
+                        <div id="alerts-container" ></div>
+
+                    </div>
+                    <!--end col-->
+                </div>
+                <!--end row-->
+
+               
+                <!--end row-->
+            </div><!-- container -->
+
+            <!--Start Rightbar-->
+            <!--Start Rightbar/offcanvas-->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+                <div class="offcanvas-header border-bottom justify-content-between">
+                  <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+                  <button type="button" class="btn-close text-reset p-0 m-0 align-self-center" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">  
+                    <h6>Account Settings</h6>
+                    <div class="p-2 text-start mt-3">
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="settings-switch1">
+                            <label class="form-check-label" for="settings-switch1">Auto updates</label>
+                        </div><!--end form-switch-->
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="settings-switch2" checked>
+                            <label class="form-check-label" for="settings-switch2">Location Permission</label>
+                        </div><!--end form-switch-->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="settings-switch3">
+                            <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+                        </div><!--end form-switch-->
+                    </div><!--end /div-->
+                    <h6>General Settings</h6>
+                    <div class="p-2 text-start mt-3">
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="settings-switch4">
+                            <label class="form-check-label" for="settings-switch4">Show me Online</label>
+                        </div><!--end form-switch-->
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="settings-switch5" checked>
+                            <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+                        </div><!--end form-switch-->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="settings-switch6">
+                            <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+                        </div><!--end form-switch-->
+                    </div><!--end /div-->               
+                </div><!--end offcanvas-body-->
+            </div>
+            <!--end Rightbar/offcanvas-->
+            <!--end Rightbar-->
+            <!--Start Footer-->
+        
+            <!--end footer-->
+        </div>
+        <!-- end page content -->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- Javascript  -->
+    <!-- vendor js -->
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="fullscreen.js"></script>
+
+    <!-- <script src="assets/libs/fetch.js"></script> -->
+    <script src="assets/libs/script.js"></script>
+    <script src="assets/libs/script7.js"></script>
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/libs/chartdata.js"></script>
+    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/maps/world.js"></script>
+    <script src="assets/js/pages/index.init.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+<!--end body-->
+
+</html>
